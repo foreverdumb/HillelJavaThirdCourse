@@ -34,7 +34,7 @@ public class H2Util {
         return connection;
     }
 
-    public static void createDB() {
+    public static boolean createDB() {
         try {
             Connection connection = connect();
             ScriptRunner scriptRunner = new ScriptRunner(connection);
@@ -46,16 +46,18 @@ public class H2Util {
                 Reader reader = new BufferedReader(new InputStreamReader(inputStream));
                 scriptRunner.runScript(reader);
             }
-            connection.close();
             appLogger.log(Level.INFO, "Database successfully created...");
+            connection.close();
+            return true;
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
             exception.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <createDB> METHOD...");
         }
+        return false;
     }
 
-    public static void dropDB() {
+    public static boolean dropDB() {
         try {
             Connection connection = connect();
             ScriptRunner scriptRunner = new ScriptRunner(connection);
@@ -69,14 +71,16 @@ public class H2Util {
             }
             connection.close();
             appLogger.log(Level.INFO, "Database successfully dropped...");
+            return true;
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
             exception.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <dropDB> METHOD...");
         }
+        return false;
     }
 
-    public static void insertCountries() {
+    public static boolean insertCountries() {
         try {
             String sql = "INSERT INTO PUBLIC.COUNTRIES (country_name) VALUES (?)";
             CountryPojo bean;
@@ -110,14 +114,16 @@ public class H2Util {
             connection.commit();
             connection.close();
             appLogger.log(Level.INFO, "Values were successfully inserted from <countries.scv>...");
+            return true;
         } catch (IOException | SQLException exception) {
             System.out.println(exception.getMessage());
             exception.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <insertCountries> METHOD...");
         }
+        return false;
     }
 
-    public static void insertRegions() {
+    public static boolean insertRegions() {
         try {
             String sql = "INSERT INTO PUBLIC.REGIONS (ID_CON, REGION_NAME) VALUES (?, ?)";
             RegionPojo bean;
@@ -154,14 +160,16 @@ public class H2Util {
             connection.commit();
             connection.close();
             appLogger.log(Level.INFO, "Values were successfully inserted from <regions.scv>...");
+            return true;
         } catch (IOException | SQLException exception) {
             System.out.println(exception.getMessage());
             exception.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <insertRegions> METHOD...");
         }
+        return false;
     }
 
-    public static void insertCities() {
+    public static boolean insertCities() {
         try {
             String sql = "INSERT INTO PUBLIC.CITIES (ID_CON, ID_REG, CITY_NAME) VALUES (?, ?, ?)";
             CityPojo bean;
@@ -201,14 +209,16 @@ public class H2Util {
             connection.commit();
             connection.close();
             appLogger.log(Level.INFO, "Values were successfully inserted from <cities.csv>...");
+            return true;
         } catch (IOException | SQLException exception) {
             System.out.println(exception.getMessage());
             exception.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <insertCities> METHOD...");
         }
+        return false;
     }
 
-    public static void customInsertCountries(CountryPojo countryPojo) {
+    public static boolean customInsertCountries(CountryPojo countryPojo) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -218,14 +228,17 @@ public class H2Util {
                     countryPojo.getCountry_name());
             statement.executeUpdate(sql);
             appLogger.log(Level.INFO, "Custom country value was successfully added...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <customInsertCountries> METHOD...");
         }
+        return false;
     }
 
-    public static void customInsertRegions(RegionPojo regionPojo) {
+    public static boolean customInsertRegions(RegionPojo regionPojo) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -236,14 +249,17 @@ public class H2Util {
                     regionPojo.getRegion_name());
             statement.executeUpdate(sql);
             appLogger.log(Level.INFO, "Custom region value was successfully added...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <customInsertRegions> METHOD...");
         }
+        return false;
     }
 
-    public static void customInsertCities(CityPojo cityPojo) {
+    public static boolean customInsertCities(CityPojo cityPojo) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -255,14 +271,17 @@ public class H2Util {
                     cityPojo.getCity_name());
             statement.executeUpdate(sql);
             appLogger.log(Level.INFO, "Custom city value was successfully added...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <customInsertCities> METHOD...");
         }
+        return false;
     }
 
-    public static void findCountryById(int id) {
+    public static boolean findCountryById(int id) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -272,20 +291,24 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "COUNTRY ID IS MISSING...");
-                return;
+                connection.close();
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(2));
             }
             appLogger.log(Level.INFO, "Country value was successfully found by id...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findElementById> METHOD...");
         }
+        return false;
     }
 
-    public static void findCountryByName(String name) {
+    public static boolean findCountryByName(String name) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -295,20 +318,23 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "COUNTRY NAME IS MISSING...");
-                return;
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(2));
             }
             appLogger.log(Level.INFO, "Country value was successfully found by name...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findCountryByName> METHOD...");
         }
+        return false;
     }
 
-    public static void findRegionById(int id) {
+    public static boolean findRegionById(int id) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -318,20 +344,23 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "REGION ID IS MISSING...");
-                return;
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(3));
             }
             appLogger.log(Level.INFO, "Region value was successfully found by id...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findRegionById> METHOD...");
         }
+        return false;
     }
 
-    public static void findRegionByName(String name) {
+    public static boolean findRegionByName(String name) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -341,20 +370,23 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "REGION NAME IS MISSING...");
-                return;
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(3));
             }
             appLogger.log(Level.INFO, "Region value was successfully found by name...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findRegionByName> METHOD...");
         }
+        return false;
     }
 
-    public static void findCityById(int id) {
+    public static boolean findCityById(int id) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -364,20 +396,23 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "CITY ID IS MISSING...");
-                return;
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(4));
             }
             appLogger.log(Level.INFO, "City value was successfully found by id...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findCityById> METHOD...");
         }
+        return false;
     }
 
-    public static void findCityByName(String name) {
+    public static boolean findCityByName(String name) {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -387,20 +422,23 @@ public class H2Util {
             ResultSet resultSet = statement.executeQuery(sql);
             if (!resultSet.isBeforeFirst()) {
                 appLogger.log(Level.WARN, "CITY NAME IS MISSING...");
-                return;
+                return false;
             }
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(4));
             }
             appLogger.log(Level.INFO, "City value was successfully found by name...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <findCityByName> METHOD...");
         }
+        return false;
     }
 
-    public static void printCountries() {
+    public static boolean printCountries() {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -410,14 +448,17 @@ public class H2Util {
                 System.out.println(resultSet.getString(2));
             }
             appLogger.log(Level.INFO, "Countries values were successfully printed...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <printCountries> METHOD...");
         }
+        return false;
     }
 
-    public static void printRegions() {
+    public static boolean printRegions() {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -427,14 +468,17 @@ public class H2Util {
                 System.out.println(resultSet.getString(3));
             }
             appLogger.log(Level.INFO, "Regions values were successfully printed...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <printRegions> METHOD...");
         }
+        return false;
     }
 
-    public static void printCities() {
+    public static boolean printCities() {
         try {
             Connection connection = connect();
             Statement statement = connection.createStatement();
@@ -444,10 +488,13 @@ public class H2Util {
                 System.out.println(resultSet.getString(4));
             }
             appLogger.log(Level.INFO, "Cities values were successfully printed...");
+            connection.close();
+            return true;
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage());
             sqlException.printStackTrace();
             appLogger.log(Level.WARN, "CAUGHT EXCEPTION IN <printCities> METHOD...");
         }
+        return false;
     }
 }

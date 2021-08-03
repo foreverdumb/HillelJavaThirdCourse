@@ -8,52 +8,52 @@ import com.hillel.homework_4.utils.scannerUtil.InputUtil;
 import com.hillel.homework_4.utils.unzipUtil.UnzippingUtil;
 
 public class H2Service {
-    public static void addCountry() {
+    public static boolean addCountry() {
         String country_name = InputUtil.setValueString("country_name");
-        H2Util.customInsertCountries(new CountryPojo(country_name));
+        return H2Util.customInsertCountries(new CountryPojo(country_name));
     }
 
-    public static void addRegion() {
+    public static boolean addRegion() {
         int id_con = InputUtil.setValueInt("id_con");
         String region_name = InputUtil.setValueString("region_name");
-        H2Util.customInsertRegions(new RegionPojo(id_con, region_name));
+        return H2Util.customInsertRegions(new RegionPojo(id_con, region_name));
     }
 
-    public static void addCity() {
+    public static boolean addCity() {
         int id_con = InputUtil.setValueInt("id_con");
         int id_reg = InputUtil.setValueInt("id_reg");
         String city_name = InputUtil.setValueString("city_name");
-        H2Util.customInsertCities(new CityPojo(id_con, id_reg, city_name));
+        return H2Util.customInsertCities(new CityPojo(id_con, id_reg, city_name));
     }
 
-    public static void findCountryById() {
+    public static boolean findCountryById() {
         int id_con = InputUtil.setValueInt("id_con");
-        H2Util.findCountryById(id_con);
+        return H2Util.findCountryById(id_con);
     }
 
-    public static void findCountryByName() {
+    public static boolean findCountryByName() {
         String country_name = InputUtil.setValueString("country_name");
-        H2Util.findCountryByName(country_name);
+        return H2Util.findCountryByName(country_name);
     }
 
-    public static void findRegionById() {
+    public static boolean findRegionById() {
         int id_reg = InputUtil.setValueInt("id_reg");
-        H2Util.findRegionById(id_reg);
+        return H2Util.findRegionById(id_reg);
     }
 
-    public static void findRegionByName() {
+    public static boolean findRegionByName() {
         String region_name = InputUtil.setValueString("region_name");
-        H2Util.findRegionByName(region_name);
+        return H2Util.findRegionByName(region_name);
     }
 
-    public static void findCityById() {
+    public static boolean findCityById() {
         int id_city = InputUtil.setValueInt("id_city");
-        H2Util.findCityById(id_city);
+        return H2Util.findCityById(id_city);
     }
 
-    public static void findCityByName() {
+    public static boolean findCityByName() {
         String city_name = InputUtil.setValueString("city_name");
-        H2Util.findCityByName(city_name);
+        return H2Util.findCityByName(city_name);
     }
 
     public static void configureDB() {

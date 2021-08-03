@@ -1,7 +1,7 @@
 import com.hillel.homework_4.pojo.CityPojo;
 import com.hillel.homework_4.pojo.CountryPojo;
 import com.hillel.homework_4.pojo.RegionPojo;
-import com.hillel.homework_4.utils.DBUtil.H2Util;
+import com.hillel.homework_4.utils.dbUtil.H2Util;
 import com.hillel.homework_4.utils.unzipUtil.UnzippingUtil;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -25,50 +25,6 @@ public class TestH2 {
     }
 
     @Test
-    @Order(2)
-    public void testUnzip() {
-        rootLogger.log(Level.INFO, "Positive testing of <unzip> method...");
-        boolean isUnzipped = UnzippingUtil.unzip();
-        Assertions.assertTrue(isUnzipped);
-        testLogger.log(Level.INFO, "Positive <testUnzip> test passed");
-        rootLogger.log(Level.INFO, "Test passed!" +
-                "\n---------------------------------------------------------");
-    }
-
-    @Test
-    @Order(3)
-    public void testInsertCountries() {
-        rootLogger.log(Level.INFO, "Positive testing of <insertCountries> method...");
-        boolean isInserted = H2Util.insertCountries();
-        Assertions.assertTrue(isInserted);
-        testLogger.log(Level.INFO, "Positive <testInsertCountries> test passed");
-        rootLogger.log(Level.INFO, "Test passed!" +
-                "\n---------------------------------------------------------");
-    }
-
-    @Test
-    @Order(4)
-    public void testInsertRegions() {
-        rootLogger.log(Level.INFO, "Positive testing of <insertRegions> method...");
-        boolean isInserted = H2Util.insertRegions();
-        Assertions.assertTrue(isInserted);
-        testLogger.log(Level.INFO, "Positive <testInsertRegions> test passed");
-        rootLogger.log(Level.INFO, "Test passed!" +
-                "\n---------------------------------------------------------");
-    }
-
-    @Test
-    @Order(5)
-    public void testInsertCities() {
-        rootLogger.log(Level.INFO, "Positive testing of <insertCities> method...");
-        boolean isInserted = H2Util.insertCities();
-        Assertions.assertTrue(isInserted);
-        testLogger.log(Level.INFO, "Positive <testInsertCities> test passed");
-        rootLogger.log(Level.INFO, "Test passed!" +
-                "\n---------------------------------------------------------");
-    }
-
-    @Test
     @Order(6)
     public void testAddCountry() {
         rootLogger.log(Level.INFO, "Positive testing of <addCountry> method...");
@@ -83,7 +39,7 @@ public class TestH2 {
     @Order(7)
     public void testAddRegion() {
         rootLogger.log(Level.INFO, "Positive testing of <addRegion> method...");
-        boolean iaAdded = H2Util.customInsertRegions(new RegionPojo(4, "Litva region"));
+        boolean iaAdded = H2Util.customInsertRegions(new RegionPojo(1, "Litva region"));
         Assertions.assertTrue(iaAdded);
         testLogger.log(Level.INFO, "<Positive testAddRegion> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -105,7 +61,7 @@ public class TestH2 {
     @Order(9)
     public void testAddCity() {
         rootLogger.log(Level.INFO, "Positive testing of <addCity> method...");
-        boolean isAdded = H2Util.customInsertCities(new CityPojo(4, 10, "Litva City"));
+        boolean isAdded = H2Util.customInsertCities(new CityPojo(1, 1, "Litva City"));
         Assertions.assertTrue(isAdded);
         testLogger.log(Level.INFO, "Positive <testAddCity> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -127,7 +83,7 @@ public class TestH2 {
     @Order(11)
     public void testFindCountryById() {
         rootLogger.log(Level.INFO, "Positive testing of <findCountryById> method...");
-        boolean isFound = H2Util.findCountryById(4);
+        boolean isFound = H2Util.findCountryById(1);
         Assertions.assertTrue(isFound);
         testLogger.log(Level.INFO, "Positive <testFindCountryById> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -149,7 +105,7 @@ public class TestH2 {
     @Order(13)
     public void testFindCountryByName() {
         rootLogger.log(Level.INFO, "Positive testing of <findCountryByName> method...");
-        boolean isFound = H2Util.findCountryByName("Ukraine");
+        boolean isFound = H2Util.findCountryByName("Litva");
         Assertions.assertTrue(isFound);
         testLogger.log(Level.INFO, "Positive <testFindCountryByName> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -171,7 +127,7 @@ public class TestH2 {
     @Order(15)
     public void testFindRegionById() {
         rootLogger.log(Level.INFO, "Positive testing of <findRegionById> method...");
-        boolean isFound = H2Util.findRegionById(3);
+        boolean isFound = H2Util.findRegionById(1);
         Assertions.assertTrue(isFound);
         testLogger.log(Level.INFO, "<testFindRegionById> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -193,7 +149,7 @@ public class TestH2 {
     @Order(17)
     public void testFindRegionByName() {
         rootLogger.log(Level.INFO, "Positive testing of <findRegionByName> method...");
-        boolean isFound = H2Util.findRegionByName("Saxony");
+        boolean isFound = H2Util.findRegionByName("Litva region");
         Assertions.assertTrue(isFound);
         testLogger.log(Level.INFO, "<testFindRegionByName> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -238,7 +194,7 @@ public class TestH2 {
     @Order(21)
     public void testFindCityByName() {
         rootLogger.log(Level.INFO, "Positive testing of <findCityByName> method...");
-        boolean isFound = H2Util.findCityByName("Odessa");
+        boolean isFound = H2Util.findCityByName("Litva City");
         Assertions.assertTrue(isFound);
         testLogger.log(Level.INFO, "<testFindCityByName> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
