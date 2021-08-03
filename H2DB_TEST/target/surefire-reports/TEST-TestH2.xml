@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="26" failures="0" name="TestH2" time="1.446" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2021.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="16.0.2+7-67"/>
+    <property name="sun.boot.library.path" value="/home/michael_lipilov/Programmes/JDK/jdk-16.0.2_linux-x64_bin/jdk-16.0.2/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/michael_lipilov/IdeaProjects/HillelJavaThirdCourse/H2DB_TEST"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/michael_lipilov/IdeaProjects/HillelJavaThirdCourse/H2DB_TEST"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="16.0.2+7-67"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="60.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.13.5-200.fc34.x86_64"/>
+    <property name="user.home" value="/home/michael_lipilov"/>
+    <property name="user.timezone" value="Europe/Kiev"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="16"/>
+    <property name="user.name" value="michael_lipilov"/>
+    <property name="java.class.path" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/boot/plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.2 package"/>
+    <property name="java.home" value="/home/michael_lipilov/Programmes/JDK/jdk-16.0.2_linux-x64_bin/jdk-16.0.2"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="16.0.2"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+  </properties>
+  <testcase classname="TestH2" name="TestH2.testCreateDB" time="0.283"/>
+  <testcase classname="TestH2" name="TestH2.testUnzip" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testInsertCountries" time="0.076"/>
+  <testcase classname="TestH2" name="TestH2.testInsertRegions" time="0.327"/>
+  <testcase classname="TestH2" name="TestH2.testInsertCities" time="0.408"/>
+  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0.052"/>
+  <testcase classname="TestH2" name="TestH2.testAddRegion" time="0.01"/>
+  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0.028"/>
+  <testcase classname="TestH2" name="TestH2.testAddCity" time="0"/>
+  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.008"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0.001"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.005"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityByName" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityByNameNegative" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0.005"/>
+  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.004"/>
+  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.209"/>
+</testsuite>
