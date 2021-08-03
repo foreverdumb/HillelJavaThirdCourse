@@ -1,7 +1,7 @@
-#Java Hillel Enterprise Course
+# Java Hillel Enterprise Course
 
-##2021
+## 2021
 
-###Summer - December
+### Summer - December
 
-###HomeWork
+### HomeWork
