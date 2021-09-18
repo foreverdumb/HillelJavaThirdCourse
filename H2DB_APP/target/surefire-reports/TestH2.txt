@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestH2
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.258 sec
-=======
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.839 sec
->>>>>>> 4b9d598e944b7d6b2800dfde45b589463d42437c
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.855 sec

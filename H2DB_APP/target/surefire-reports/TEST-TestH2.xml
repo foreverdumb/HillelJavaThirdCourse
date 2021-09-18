@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="22" failures="0" name="TestH2" time="3.252" errors="0" skipped="0">
-=======
-<testsuite tests="22" failures="0" name="TestH2" time="3.832" errors="0" skipped="0">
->>>>>>> 4b9d598e944b7d6b2800dfde45b589463d42437c
+<testsuite tests="22" failures="0" name="TestH2" time="1.849" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -61,51 +57,26 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="21.3"/>
   </properties>
-<<<<<<< HEAD
-  <testcase classname="TestH2" name="TestH2.testCreateDB" time="2.817"/>
-  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0.09"/>
-  <testcase classname="TestH2" name="TestH2.testAddRegion" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testAddCity" time="0.001"/>
-  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.237"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0.008"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.006"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0.004"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.014"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.012"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.001"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.013"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByName" time="0.006"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByNameNegative" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0.005"/>
-  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.007"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0.005"/>
-  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.012"/>
-=======
-  <testcase classname="TestH2" name="TestH2.testCreateDB" time="3.485"/>
-  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0.074"/>
+  <testcase classname="TestH2" name="TestH2.testCreateDB" time="1.512"/>
+  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0.08"/>
   <testcase classname="TestH2" name="TestH2.testAddRegion" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0.035"/>
+  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0.002"/>
   <testcase classname="TestH2" name="TestH2.testAddCity" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.01"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.119"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.007"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.017"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.007"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.009"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.003"/>
+  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.006"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.136"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.008"/>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.024"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.005"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.012"/>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.002"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.016"/>
+  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.002"/>
   <testcase classname="TestH2" name="TestH2.testFindCityByName" time="0.005"/>
   <testcase classname="TestH2" name="TestH2.testFindCityByNameNegative" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0.01"/>
-  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.008"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0.008"/>
-  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.016"/>
->>>>>>> 4b9d598e944b7d6b2800dfde45b589463d42437c
+  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0.007"/>
+  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.004"/>
+  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0.006"/>
+  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.014"/>
 </testsuite>
