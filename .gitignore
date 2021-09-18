@@ -3,6 +3,7 @@
 ##############################
 .mtj.tmp/
 *.class
+*.jar
 *.war
 *.ear
 *.nar
@@ -21,7 +22,14 @@ out/
 ##############################
 ## Maven
 ##############################
-classes/
-generated-sources/
-maven-archiver/
-maven-status/
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
