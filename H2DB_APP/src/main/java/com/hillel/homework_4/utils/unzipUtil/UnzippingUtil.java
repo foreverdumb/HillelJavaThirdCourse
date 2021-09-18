@@ -1,19 +1,28 @@
 package com.hillel.homework_4.utils.unzipUtil;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class UnzippingUtil {
+public final class UnzippingUtil {
+    private static final Logger app_logger = LogManager.getLogger("appLogger");
+
     public static boolean unzip() {
-        try {
-            String fileZip = new File("").getAbsolutePath() + "/import.zip";
-            File destDir = new File("./unzip");
-            byte[] buffer = new byte[1024];
-            ZipInputStream zis = new ZipInputStream(new FileInputStream(fileZip));
+        Path fileZipPath = Path.of(".", "import.zip");
+        String fileZipPathString = fileZipPath.toString();
+        Path destDirPath = Path.of(".", "unzip");
+        File destDir = destDirPath.toFile();
+        byte[] buffer = new byte[1024];
+
+        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(fileZipPathString))) {
             ZipEntry zipEntry = zis.getNextEntry();
             while (zipEntry != null) {
                 File newFile = newFile(destDir, zipEntry);
@@ -22,27 +31,23 @@ public class UnzippingUtil {
                         throw new IOException("Failed to create directory " + newFile);
                     }
                 } else {
-                    // fix for Windows-created archives
                     File parent = newFile.getParentFile();
                     if (!parent.isDirectory() && !parent.mkdirs()) {
                         throw new IOException("Failed to create directory " + parent);
                     }
-
-                    // write file content
-                    FileOutputStream fos = new FileOutputStream(newFile);
-                    int len;
-                    while ((len = zis.read(buffer)) > 0) {
-                        fos.write(buffer, 0, len);
+                    try (FileOutputStream fos = new FileOutputStream(newFile)) {
+                        int len;
+                        while ((len = zis.read(buffer)) > 0) {
+                            fos.write(buffer, 0, len);
+                        }
                     }
-                    fos.close();
                 }
                 zipEntry = zis.getNextEntry();
             }
             zis.closeEntry();
-            zis.close();
             return true;
         } catch (IOException ioException) {
-            System.out.println(ioException.getMessage());
+            app_logger.log(Level.WARN, "CAUGHT EXCEPTION IN <unzip> METHOD...");
             ioException.printStackTrace();
             return false;
         }

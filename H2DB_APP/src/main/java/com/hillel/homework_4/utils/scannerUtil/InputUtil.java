@@ -2,7 +2,7 @@ package com.hillel.homework_4.utils.scannerUtil;
 
 import java.util.Scanner;
 
-public class InputUtil {
+public final class InputUtil {
     public static int setValueInt(String option) {
         int value;
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class InputUtil {
                         5  - Find country by name;
                         6  - Find region by ID;
                         7  - Find region by name;
-                        8  - Find city bu ID;
+                        8  - Find city by ID;
                         9  - Find city by name;
                         10 - Print all countries;
                         11 - Print all regions;

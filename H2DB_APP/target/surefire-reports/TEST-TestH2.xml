@@ -1,81 +1,256 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="22" failures="0" name="TestH2" time="1.319" errors="0" skipped="0">
+<testsuite tests="22" failures="22" name="TestH2" time="0.073" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="16.0.2+7-67"/>
-    <property name="sun.boot.library.path" value="/home/michael_lipilov/Programmes/JDK/jdk-16.0.2_linux-x64_bin/jdk-16.0.2/lib"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="16.0.2+7"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-16-openjdk-16.0.2.0.7-1.rolling.fc34.x86_64/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/michael_lipilov/IdeaProjects/HillelJavaThirdCourse/H2DB_APP"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="java.vendor.url" value="https://www.redhat.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/michael_lipilov/IdeaProjects/HillelJavaThirdCourse/H2DB_APP"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="16.0.2+7-67"/>
+    <property name="java.runtime.version" value="16.0.2+7"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="maven.ext.class.path" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven-event-listener.jar"/>
-    <property name="classworlds.conf" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="maven.ext.class.path" value="/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
-    <property name="maven.conf" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/conf"/>
+    <property name="maven.conf" value="/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="60.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.13.5-200.fc34.x86_64"/>
+    <property name="os.version" value="5.13.9-200.fc34.x86_64"/>
     <property name="user.home" value="/home/michael_lipilov"/>
     <property name="user.timezone" value="Europe/Kiev"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="16"/>
     <property name="user.name" value="michael_lipilov"/>
-    <property name="java.class.path" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3/boot/plexus-classworlds.license"/>
+    <property name="java.class.path" value="/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven3/boot/plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="16"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.2 package"/>
-    <property name="java.home" value="/home/michael_lipilov/Programmes/JDK/jdk-16.0.2_linux-x64_bin/jdk-16.0.2"/>
+    <property name="java.home" value="/usr/lib/jvm/java-16-openjdk-16.0.2.0.7-1.rolling.fc34.x86_64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.version" value="16.0.2"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/home/michael_lipilov/Programmes/IDEA/ideaIU-2021.1.3/idea-IU-211.7628.21/plugins/maven/lib/maven3"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="maven.home" value="/home/michael_lipilov/Programmes/IDE/ideaIU-2021.2/idea-IU-212.4746.92/plugins/maven/lib/maven3"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2021-07-20"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&amp;component=java-latest-openjdk&amp;version=34"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="21.3"/>
   </properties>
-  <testcase classname="TestH2" name="TestH2.testCreateDB" time="0.407"/>
-  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0.131"/>
-  <testcase classname="TestH2" name="TestH2.testAddRegion" time="0.336"/>
-  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0.103"/>
-  <testcase classname="TestH2" name="TestH2.testAddCity" time="0.006"/>
-  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.014"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.007"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.006"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.01"/>
-  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.006"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByName" time="0.002"/>
-  <testcase classname="TestH2" name="TestH2.testFindCityByNameNegative" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0.003"/>
-  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.261"/>
+  <testcase classname="TestH2" name="TestH2.testCreateDB" time="0.051">
+    <failure type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.buildSessionFactory(HibernateUtil.java:24)
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.&lt;clinit&gt;(HibernateUtil.java:10)
+	at com.hillel.homework_4.utils.dbUtil.H2Util.&lt;clinit&gt;(H2Util.java:31)
+	at TestH2.testCreateDB(TestH2.java:19)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.140 [main]  - Positive testing of &lt;createDB&gt; method...
+</system-out>
+    <system-err>Failed to create sessionFactory object.java.lang.NoClassDefFoundError: org/hibernate/cfg/Mappings
+java.lang.NoClassDefFoundError: org/hibernate/cfg/Mappings
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1010)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:855)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:753)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:676)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:634)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.buildSessionFactory(HibernateUtil.java:14)
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.&lt;clinit&gt;(HibernateUtil.java:10)
+	at com.hillel.homework_4.utils.dbUtil.H2Util.&lt;clinit&gt;(H2Util.java:31)
+	at TestH2.testCreateDB(TestH2.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.junit.PojoTestSet.executeTestMethod(PojoTestSet.java:151)
+	at org.apache.maven.surefire.junit.PojoTestSet.executeTestMethods(PojoTestSet.java:102)
+	at org.apache.maven.surefire.junit.PojoTestSet.execute(PojoTestSet.java:83)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:121)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.hibernate.cfg.Mappings
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	... 31 more
+</system-err>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testAddCountry" time="0">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCountry(TestH2.java:30)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.192 [main]  - Positive testing of &lt;addCountry&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testAddRegion" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddRegion(TestH2.java:41)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.194 [main]  - Positive testing of &lt;addRegion&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testAddRegionNegative" time="0">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddRegionNegative(TestH2.java:52)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.195 [main]  - Negative testing of &lt;addRegion&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testAddCity" time="0.002">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCity(TestH2.java:63)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.201 [main]  - Positive testing of &lt;addCity&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testAddCityNegative" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCityNegative(TestH2.java:74)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.205 [main]  - Negative testing of &lt;addCity&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCountryById" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryById(TestH2.java:85)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.206 [main]  - Positive testing of &lt;findCountryById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByIdNegative" time="0.002">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByIdNegative(TestH2.java:96)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.207 [main]  - Negative testing of &lt;findCountryById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByName" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByName(TestH2.java:107)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.209 [main]  - Positive testing of &lt;findCountryByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCountryByNameNegative" time="0">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByNameNegative(TestH2.java:118)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.210 [main]  - Negative testing of &lt;findCountryByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindRegionById" time="0.003">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionById(TestH2.java:129)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.210 [main]  - Positive testing of &lt;findRegionById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByIdNegative" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByIdNegative(TestH2.java:140)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.214 [main]  - Negative testing of &lt;findRegionById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByName" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByName(TestH2.java:151)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.215 [main]  - Positive testing of &lt;findRegionByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindRegionByNameNegative" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByNameNegative(TestH2.java:162)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.218 [main]  - Negative testing of &lt;findRegionByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCityById" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityById(TestH2.java:173)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.220 [main]  - Positive testing of &lt;findCityById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCityByIdNegative" time="0.002">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByIdNegative(TestH2.java:184)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.222 [main]  - Negative testing of &lt;findCityById&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCityByName" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByName(TestH2.java:196)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.223 [main]  - Positive testing of &lt;findCityByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testFindCityByNameNegative" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByNameNegative(TestH2.java:207)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.227 [main]  - Negative testing of &lt;findCityByName&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testPrintCountries" time="0">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintCountries(TestH2.java:218)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.228 [main]  - Positive testing of &lt;printCountries&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testPrintRegions" time="0.002">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintRegions(TestH2.java:229)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.232 [main]  - Positive testing of &lt;printRegions&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testPrintCities" time="0">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintCities(TestH2.java:240)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.234 [main]  - Positive testing of &lt;printCities&gt; method...
+</system-out>
+  </testcase>
+  <testcase classname="TestH2" name="TestH2.testDropDB" time="0.001">
+    <failure message="Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testDropDB(TestH2.java:251)
+</failure>
+    <system-out>[INFO ] 2021-09-18 21:45:35.235 [main]  - Positive testing of &lt;dropDB&gt; method...
+</system-out>
+  </testcase>
 </testsuite>

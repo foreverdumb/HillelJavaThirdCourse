@@ -1,0 +1,23 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<!DOCTYPE hibernate-mapping PUBLIC-->
+<!--        "-//Hibernate/Hibernate Mapping DTD//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">-->
+<!--<hibernate-mapping>-->
+
+<!--    <class name="com.hillel.homework_4.pojo.RegionPojo" table="Regions">-->
+
+<!--        <meta attribute="class-description">-->
+<!--            This class contains regions' details.-->
+<!--        </meta>-->
+
+<!--        <id name="id_region" type="int" column="id_region">-->
+<!--            <generator class="native"/>-->
+<!--        </id>-->
+
+<!--        <property name="getIdCon" column="id_con" type="int"/>-->
+
+<!--        <property name="getRegionName" column="region_name" type="string"/>-->
+
+<!--    </class>-->
+
+<!--</hibernate-mapping>-->

@@ -1,4 +1,95 @@
 -------------------------------------------------------------------------------
 Test set: TestH2
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.328 sec
+Tests run: 22, Failures: 22, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec <<< FAILURE!
+TestH2.testCreateDB()  Time elapsed: 0.051 sec  <<< FAILURE!
+java.lang.ExceptionInInitializerError
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.buildSessionFactory(HibernateUtil.java:24)
+	at com.hillel.homework_4.utils.hibernateUtil.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at com.hillel.homework_4.utils.dbUtil.H2Util.<clinit>(H2Util.java:31)
+	at TestH2.testCreateDB(TestH2.java:19)
+
+TestH2.testAddCountry()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCountry(TestH2.java:30)
+
+TestH2.testAddRegion()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddRegion(TestH2.java:41)
+
+TestH2.testAddRegionNegative()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddRegionNegative(TestH2.java:52)
+
+TestH2.testAddCity()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCity(TestH2.java:63)
+
+TestH2.testAddCityNegative()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testAddCityNegative(TestH2.java:74)
+
+TestH2.testFindCountryById()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryById(TestH2.java:85)
+
+TestH2.testFindCountryByIdNegative()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByIdNegative(TestH2.java:96)
+
+TestH2.testFindCountryByName()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByName(TestH2.java:107)
+
+TestH2.testFindCountryByNameNegative()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCountryByNameNegative(TestH2.java:118)
+
+TestH2.testFindRegionById()  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionById(TestH2.java:129)
+
+TestH2.testFindRegionByIdNegative()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByIdNegative(TestH2.java:140)
+
+TestH2.testFindRegionByName()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByName(TestH2.java:151)
+
+TestH2.testFindRegionByNameNegative()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindRegionByNameNegative(TestH2.java:162)
+
+TestH2.testFindCityById()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityById(TestH2.java:173)
+
+TestH2.testFindCityByIdNegative()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByIdNegative(TestH2.java:184)
+
+TestH2.testFindCityByName()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByName(TestH2.java:196)
+
+TestH2.testFindCityByNameNegative()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testFindCityByNameNegative(TestH2.java:207)
+
+TestH2.testPrintCountries()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintCountries(TestH2.java:218)
+
+TestH2.testPrintRegions()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintRegions(TestH2.java:229)
+
+TestH2.testPrintCities()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testPrintCities(TestH2.java:240)
+
+TestH2.testDropDB()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.hillel.homework_4.utils.dbUtil.H2Util
+	at TestH2.testDropDB(TestH2.java:251)
+

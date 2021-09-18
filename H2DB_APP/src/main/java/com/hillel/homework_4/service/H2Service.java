@@ -7,23 +7,26 @@ import com.hillel.homework_4.utils.dbUtil.H2Util;
 import com.hillel.homework_4.utils.scannerUtil.InputUtil;
 import com.hillel.homework_4.utils.unzipUtil.UnzippingUtil;
 
-public class H2Service {
+public final class H2Service {
     public static boolean addCountry() {
-        String country_name = InputUtil.setValueString("country_name");
-        return H2Util.customInsertCountries(new CountryPojo(country_name));
+        int idCon = InputUtil.setValueInt("id_con");
+        String countryName = InputUtil.setValueString("country_name");
+        return H2Util.customInsertCountries(new CountryPojo(idCon, countryName));
     }
 
     public static boolean addRegion() {
-        int id_con = InputUtil.setValueInt("id_con");
+        int idReg = InputUtil.setValueInt("id_reg");
+        int idCon = InputUtil.setValueInt("id_con");
         String region_name = InputUtil.setValueString("region_name");
-        return H2Util.customInsertRegions(new RegionPojo(id_con, region_name));
+        return H2Util.customInsertRegions(new RegionPojo(idReg, idCon, region_name));
     }
 
     public static boolean addCity() {
-        int id_con = InputUtil.setValueInt("id_con");
-        int id_reg = InputUtil.setValueInt("id_reg");
+        int idCity = InputUtil.setValueInt("id_city");
+        int idCon = InputUtil.setValueInt("id_con");
+        int idReg = InputUtil.setValueInt("id_reg");
         String city_name = InputUtil.setValueString("city_name");
-        return H2Util.customInsertCities(new CityPojo(id_con, id_reg, city_name));
+        return H2Util.customInsertCities(new CityPojo(idCity, idCon, idReg, city_name));
     }
 
     public static boolean findCountryById() {
@@ -56,12 +59,14 @@ public class H2Service {
         return H2Util.findCityByName(city_name);
     }
 
-    public static void configureDB() {
-        UnzippingUtil.unzip();
-        H2Util.createDB();
-        H2Util.insertCountries();
-        H2Util.insertRegions();
-        H2Util.insertCities();
+    public static boolean configureDB() {
+        boolean isUnzipped = UnzippingUtil.unzip();
+        boolean isCreated = H2Util.createDB();
+        boolean isInsertedCsvCountries = H2Util.insertCountries();
+        boolean isInsertedCsvRegions = H2Util.insertRegions();
+        boolean isInsertedCsvCities = H2Util.insertCities();
+
+        return isUnzipped && isCreated && isInsertedCsvCities && isInsertedCsvCountries && isInsertedCsvRegions;
     }
 }
 

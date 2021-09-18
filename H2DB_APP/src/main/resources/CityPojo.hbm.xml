@@ -1,0 +1,25 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<!DOCTYPE hibernate-mapping PUBLIC-->
+<!--        "-//Hibernate/Hibernate Mapping DTD//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">-->
+<!--<hibernate-mapping>-->
+
+<!--    <class name="com.hillel.homework_4.pojo.CityPojo" table="Cities">-->
+
+<!--        <meta attribute="class-description">-->
+<!--            This class contains city's details.-->
+<!--        </meta>-->
+
+<!--        <id name="getIdCity" type="int" column="id_city">-->
+<!--            <generator class="native"/>-->
+<!--        </id>-->
+
+<!--        <property name="getIdCon" column="id_con" type="int"/>-->
+
+<!--        <property name="getIdReg" column="id_reg" type="int"/>-->
+
+<!--        <property name="getCityName" column="city_name" type="string"/>-->
+
+<!--    </class>-->
+
+<!--</hibernate-mapping>-->

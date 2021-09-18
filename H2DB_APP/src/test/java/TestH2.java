@@ -2,7 +2,6 @@ import com.hillel.homework_4.pojo.CityPojo;
 import com.hillel.homework_4.pojo.CountryPojo;
 import com.hillel.homework_4.pojo.RegionPojo;
 import com.hillel.homework_4.utils.dbUtil.H2Util;
-import com.hillel.homework_4.utils.unzipUtil.UnzippingUtil;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,7 +27,7 @@ public class TestH2 {
     @Order(6)
     public void testAddCountry() {
         rootLogger.log(Level.INFO, "Positive testing of <addCountry> method...");
-        boolean isAdded = H2Util.customInsertCountries(new CountryPojo("Litva"));
+        boolean isAdded = H2Util.customInsertCountries(new CountryPojo(1,"Litva"));
         Assertions.assertTrue(isAdded);
         testLogger.log(Level.INFO, "Positive <testAddCountry> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -39,7 +38,7 @@ public class TestH2 {
     @Order(7)
     public void testAddRegion() {
         rootLogger.log(Level.INFO, "Positive testing of <addRegion> method...");
-        boolean iaAdded = H2Util.customInsertRegions(new RegionPojo(1, "Litva region"));
+        boolean iaAdded = H2Util.customInsertRegions(new RegionPojo(1,1, "Litva region"));
         Assertions.assertTrue(iaAdded);
         testLogger.log(Level.INFO, "<Positive testAddRegion> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -50,7 +49,7 @@ public class TestH2 {
     @Order(8)
     public void testAddRegionNegative() {
         rootLogger.log(Level.INFO, "Negative testing of <addRegion> method...");
-        boolean isAdded = H2Util.customInsertRegions(new RegionPojo(60, "fsdfdfsdf"));
+        boolean isAdded = H2Util.customInsertRegions(new RegionPojo(5,10, null));
         Assertions.assertFalse(isAdded);
         testLogger.log(Level.INFO, "Negative <testAddRegion> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -61,7 +60,7 @@ public class TestH2 {
     @Order(9)
     public void testAddCity() {
         rootLogger.log(Level.INFO, "Positive testing of <addCity> method...");
-        boolean isAdded = H2Util.customInsertCities(new CityPojo(1, 1, "Litva City"));
+        boolean isAdded = H2Util.customInsertCities(new CityPojo(1,1, 1, "Litva City"));
         Assertions.assertTrue(isAdded);
         testLogger.log(Level.INFO, "Positive <testAddCity> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +
@@ -72,7 +71,7 @@ public class TestH2 {
     @Order(10)
     public void testAddCityNegative() {
         rootLogger.log(Level.INFO, "Negative testing of <addCity> method...");
-        boolean isAdded = H2Util.customInsertCities(new CityPojo(60,60,"vncmdofijfd"));
+        boolean isAdded = H2Util.customInsertCities(null);
         Assertions.assertFalse(isAdded);
         testLogger.log(Level.INFO, "Negative <testAddCity> test passed");
         rootLogger.log(Level.INFO, "Test passed!" +

@@ -1,20 +1,47 @@
 package com.hillel.homework_4.pojo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Countries")
 public class CountryPojo {
-    String country_name;
+
+    @Id
+    @Column(name = "id_country")
+    int idCountry;
+
+    @Column(name = "country_name")
+    String countryName;
 
     public CountryPojo() {
     }
 
-    public CountryPojo(String country_name) {
-        this.country_name = country_name;
+    public int getIdCountry() {
+        return idCountry;
     }
 
-    public String getCountry_name() {
-        return country_name;
+    public void setIdCountry(int idCountry) {
+        this.idCountry = idCountry;
     }
 
-    public void setCountry_name(String country_name) {
-        this.country_name = country_name;
+    public CountryPojo(int idCountry, String countryName) {
+        this.idCountry = idCountry;
+        this.countryName = countryName;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    @Override
+    public String toString() {
+        return "CountryPojo{" +
+                "id_country=" + idCountry +
+                ", country_name='" + countryName + '\'' +
+                '}';
     }
 }
