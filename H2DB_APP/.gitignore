@@ -21,6 +21,7 @@ out/
 ##############################
 ## Maven
 ##############################
+*.jar
 classes/
 generated-sources/
 maven-archiver/
